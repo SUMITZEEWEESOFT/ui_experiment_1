@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_experiment_1/drawer.dart';
 import './splashscreen.dart';
 import './homepage.dart';
 import './allcategory.dart';
@@ -16,8 +17,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return MaterialApp(
+      theme: ThemeData(
+          canvasColor: Colors.transparent,
+          backgroundColor: Colors.white,
+
+
+
+
+          bottomNavigationBarTheme: BottomNavigationBarThemeData(
+              backgroundColor: Colors.white,
+          )),
       debugShowCheckedModeBanner: false,
-      initialRoute: ('/'),
+      initialRoute: ('/home'),
       routes: {
         '/':(context) => SplashScreen(),
         '/home':(context) => HomePage(),
@@ -28,7 +39,6 @@ class MyApp extends StatelessWidget {
         '/myaccount':(context) => MyAccount(),
         '/btm' : (context) => BtmNavigationBar(),
       },
-
     );
   }
 }

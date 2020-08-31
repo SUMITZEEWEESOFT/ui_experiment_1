@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
+import './drawer.dart';
 
 class Products extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.blue[800],
-      ),
+      drawer: Drawerr(),
+      backgroundColor: Colors.white,
+      appBar: AppBar(),
       body: SafeArea(
         child: Text('here is your Products'),
       ),
